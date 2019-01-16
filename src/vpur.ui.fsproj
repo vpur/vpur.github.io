@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Import/Fable.Import.Lowdb.fs" />
+    <Compile Include="Import/Fable.Import.Showdown.fs" />
+    <Compile Include="Render.fs" />
+    <Compile Include="Constants.fs" />
+    <Compile Include="Logger.fs" />
+    <Compile Include="Routing.fs" />
+    <Compile Include="Components/LoginForm.fs" />
+    <Compile Include="Components/Auth.fs" />
+    <Compile Include="Components/Tiles.fs" />
+    <Compile Include="Components/Navigation.fs" />
+    <Compile Include="Components/FolderNavigation.fs" />
+    <Compile Include="Components/AdventurersLeagueLogEntry.fs" />
+    <Compile Include="Pages/AdventurersLeagueLogPage.fs" />
+    <Compile Include="Pages/DnDHomePage.fs" />
+    <Compile Include="Pages/DnDPage.fs" />
+    <Compile Include="Pages/HomePage.fs" />
+    <Compile Include="Layout.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <Import Project="..\.paket\Paket.Restore.targets" />
+</Project>

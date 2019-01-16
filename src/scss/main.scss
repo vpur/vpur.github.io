@@ -1,0 +1,43 @@
+@import "./../../node_modules/bulma/sass/utilities/initial-variables";
+@import "./../../node_modules/bulma/sass/utilities/functions";
+
+// Customize
+// Colors
+$primary: #2D3947;
+// Links
+$link-hover: #00D1B2;
+
+$card-header-background-color: $white-ter;
+
+$fa-font-path: "./../font-awesome/webfonts/";
+@import './../font-awesome/scss/fontawesome.scss';
+@import './../font-awesome/scss/brands.scss';
+@import './../font-awesome/scss/regular.scss';
+
+@import './../../node_modules/bulma/bulma.sass';
+@import './../../node_modules/bulma-pageloader/dist/css/bulma-pageloader.sass';
+
+html,
+body {
+    font-size: 14px;
+}
+
+.navbar-bg {
+    background-color: $primary;
+    .title {
+        color: $white;
+    }
+}
+
+.navbar {
+    .image {
+        img {
+            height: 100%;
+            max-height: inherit;
+        }
+    }
+}
+
+.vote-area > * {
+    margin-right: .5em;
+}
