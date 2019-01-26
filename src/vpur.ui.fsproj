@@ -14,7 +14,9 @@
     <Compile Include="Components/Tiles.fs" />
     <Compile Include="Components/Navigation.fs" />
     <Compile Include="Components/FolderNavigation.fs" />
-    <Compile Include="Components/AdventurersLeagueLogEntry.fs" />
+    <Compile Include="Components/DnD/AdventurersLeague/Logsheet/Data.fs" />
+    <Compile Include="Components/DnD/AdventurersLeague/Logsheet/State.fs" />
+    <Compile Include="Components/DnD/AdventurersLeague/Logsheet/View.fs" />
     <Compile Include="Pages/AdventurersLeagueLogPage.fs" />
     <Compile Include="Pages/DnDHomePage.fs" />
     <Compile Include="Pages/DnDPage.fs" />

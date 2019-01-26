@@ -114,10 +114,7 @@ let cardSection title content =
 
 let fullView dispatch state =
   Card.card [ ]
-    [ // Card.header [ ]
-      //   [ Card.Header.title [ Card.Header.Title.IsCentered ]
-      //       [ str <| sprintf "%s" state.LogEntry.AdventureTitle ] ]
-      Card.content [ ]
+    [ Card.content [ ]
         [ Content.content [ ]
             [ h1 [ ]
                 [ str <| sprintf "#%i %s" state.LogEntry.SessionNumber state.LogEntry.AdventureTitle ]
@@ -181,37 +178,6 @@ let fullView dispatch state =
                 [ str "Notes" ]
               p [ ]
                 [ str <| state.LogEntry.Notes ] ] ]
-        // [ Tile.ancestor [ ]
-        //     [ Tile.parent [ Tile.IsVertical ]
-        //         [ Tile.parent [ ]
-        //             [ Tile.child [ ]
-        //                 [
-        //                   Level.level [ ] [
-        //                     cardSection "Session"  (str <| sprintf "#%i " state.LogEntry.SessionNumber)
-        //                     cardSection "Date"     (str <| state.LogEntry.Date.ToString("yyyy/MM/dd"))
-        //                     cardSection "Title"    (str <| state.LogEntry.AdventureTitle)
-        //                   ]
-        //                 ]
-        //               //   [ b [ ] [ str "Session: " ]
-        //               //     str <| sprintf "%i" state.LogEntry.SessionNumber ]
-        //               // Tile.child [ ]
-        //               //   [ b [ ] [ str "Advancement Checkpoints: " ]
-        //               //     str <| sprintf "%i" state.LogEntry.AdvancementCheckpoints ]
-        //               // Tile.child [ ]
-        //               //   [ b [ ] [ str "Treasure Checkpoints: " ]
-        //               //     str <| sprintf "%i" state.LogEntry.TreasureCheckpoints ] ]
-        //             ]
-        //           Tile.parent [ Tile.IsVertical ]
-        //             [ Tile.parent [ ]
-        //                 [ Tile.child [ ]
-        //                     [ b [ ] [ str "Dungeon Master: " ]
-        //                       str state.LogEntry.DungeonMaster ]
-        //                   Tile.child [ ]
-        //                     [ b [ ] [ str "Location" ]
-        //                       str state.LogEntry.Location ]
-        //                   Tile.child [ ]
-        //                     [ b [ ] [ str "Other notes" ]
-        //                       str state.LogEntry.Notes ] ] ] ] ] ]
       Card.footer [ ]
         [ Card.Footer.a
             [ Props [ OnClick <| fun _ -> dispatch <| Msg.Edit state.LogEntry.Id ] ]
@@ -235,6 +201,7 @@ let shortView dispatch state =
               cardSection "Caracter" (str <| character)
               cardSection "Date"     (str <| state.LogEntry.Date.ToString("yyyy/MM/dd")) ] ] ]
 
+// TODO: when modal window is shown the background is still scrollable
 let view dispatch state =
   Container.container [ Container.IsFluid ]
     [ Content.content [ ]

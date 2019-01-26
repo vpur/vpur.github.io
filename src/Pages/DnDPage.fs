@@ -10,10 +10,10 @@ open VPur.UI.Components
 type State =
   { AdventurersLeagueLogPageState: AdventurersLeagueLogPage.State }
   with static member Empty =
-         { AdventurersLeagueLogPageState = AdventurersLeagueLogPage.State.Empty }
+         { AdventurersLeagueLogPageState = AdventurersLeagueLogPage.init () }
 
 type Msg =
-  | AdventurersLeagueLogPageMsg of AdventurersLeagueLogPage.Msg
+  | AdventurersLeagueLogPageMsg of DnD.AdventurersLeague.Logsheet.State.Msg
 
 let update state = function
   | AdventurersLeagueLogPageMsg msg ->
