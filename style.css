@@ -11994,5 +11994,8 @@ body {
 .vote-area > * {
   margin-right: .5em; }
 
+.media + .media {
+  border-top: 0px; }
+
 
 /*# sourceMappingURL=style.css.map*/
